@@ -8,12 +8,9 @@ This port has been made with a device's camera input in mind, which means that s
 ## Usage
 
 Just like with the original, you create a color map by passing an Android.Graphics.Bitmap to the ColorThief class.
-`
+```java
   Bitmap imageBitmap = (Bitmap) extras.get("data");
-  
   MMCQ.CMap result = ColorThief.getColorMap(imageBitmap, 5);
-  
   MMCQ.VBox dominantColor = result.vboxes.get(0);
-  
   int[] rgb = dominantColor.avg(false);
-`
+```
